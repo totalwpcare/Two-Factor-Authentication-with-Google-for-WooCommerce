@@ -1,8 +1,10 @@
-
+<?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit 
+?>
 <div class="wrap">
    <div class="search">
       <p class="desc">Please enter the validation code displayed in Google Authenticator App.</p>
-      <input class="ga-vericode-input" type="text" id="verification_code" placeholder="Enter Code">
+      <input class="ga-vericode-input" type="number" id="verification_code" placeholder="Enter Code">
       <button class="btn-setup-ga" id="google_auth_validate">Validate</button>
    </div>
 </div>

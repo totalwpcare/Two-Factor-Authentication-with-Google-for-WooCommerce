@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit 
 
 /**
  * PHP Class for handling Google Authenticator 2-factor authentication.
@@ -9,7 +10,7 @@
  *
  * @link http://www.phpgangsta.de/
  */
-class GoogleAuthenticator
+class TotalWPCare_GoogleAuthenticator
 {
     protected $_codeLength = 6;
 

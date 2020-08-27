@@ -1,6 +1,9 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit 
+?>
 <div class="wrap">
    <div class="search" id="google_auth_data">
-      <?php if(!empty(get_user_meta(get_current_user_id(), 'google_auth_secret', true))) { ?>
+      <?php if(!empty(get_user_meta(get_current_user_id(), 'TotalWPCare_google_auth_secret', true))) { ?>
         <img src="<?php echo TOTALWPCARE__PLUGIN_URL ?>public/img/google-authenticator.png" class="ga-img"/>
         <p class="desc">Please scan this QR code in Google Authenticator and Create account to access this Account Again.</p>
         <button class="btn-setup-ga" id="google_auth_step_1">Update Google Authenticator</button>
@@ -114,7 +117,7 @@
     font-weight: bold;
     background: #fbedec;
     color: #F44336;
-    padding: 15px;
+    /* padding: 15px; */
     border-radius: 10px;
   }
   @media (max-width:575px){

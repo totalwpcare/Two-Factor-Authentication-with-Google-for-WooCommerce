@@ -1,4 +1,4 @@
-=== WC Google Authenticator - WC Two Factor Authentication (2FA , MFA) ===
+=== Two Factor Authentication with Google for WooCommerce ===
 
 Contributors: totalwpcare, amitkumarpro
 Tags: google authenticator, two factor authentication, two factor, 2FA,two-step verification, mobile verification,OTP, two-step verification, mobile verification,two factor,Two step verification, 2FA, TFA, MFA, 2 factor authentication, OTP,Woocommerce otp, two step authentication, signup security, two factor auth, Mobile Authentication, strong authentication, 2 step authentication, mobile verification,Multifactor authentication, one time passcode, soft token Authentication, QR Code Authentication, email verification, KBA, Security Questions,2FA, login OTP, login with SMS, mobile login, OTP login, mobile verification,knowledge based authentication,authy, authy two factor,Two-Factor Authentication,Woocommerce otp, security,user security, woocommerce, website security, login security, multi factor authentication, multi factor,wordfence, login Audits, woocommerce, auth, login with OTP Woocommerce, OTP, two-step authentication, one time passcode
@@ -37,18 +37,11 @@ Customized solutions and Active support is available. Email us at info@totalwpca
 3. Install `WC Google Authenticator - WC Two Factor Authentication (2FA , MFA)` and Activate the plugin.
 
 = From WordPress.org =
-1. Search for `WC Google Authenticator - WC Two Factor Authentication (2FA , MFA)` and download it.
-2. Unzip and upload the `WC Google Authenticator - WC Two Factor Authentication (2FA , MFA)` directory to your `/wp-content/plugins/` directory.
-3. Activate WC Google Authenticator - WC Two Factor Authentication (2FA , MFA) from the Plugins tab of your admin dashboard.
-
-
-== Screenshots ==
-
-1. Setup different 2-Factor methods.
-2. Enable or Disable 2-factor for Users.
-3. 2 Factor Authentication prompt during Login.
+1. Search for `Two Factor Authentication with Google for WooCommerce` and download it.
+2. Unzip and upload the `Two Factor Authentication with Google for WooCommerce` directory to your `/wp-content/plugins/` directory.
+3. Activate `Two Factor Authentication with Google for WooCommerce` from the Plugins tab of your admin dashboard.
 
 == Changelog ==
 
 = 1.0.0 =
-* First version of WC Google Authenticator - WC Two Factor Authentication (2FA , MFA) plugin supported with Google Authenticator for woocommerce users.
+* First version of `Two Factor Authentication with Google for WooCommerce` plugin supported with Google Authenticator for woocommerce users.
