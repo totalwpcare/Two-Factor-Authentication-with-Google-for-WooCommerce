@@ -6,7 +6,7 @@ Donate link: https://totalwpcare.com/donate/
 Requires at least: 3.0.1
 Tested up to: 5.5
 Requires PHP: 5.4.0
-Stable tag: 1.0.0
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,8 +33,8 @@ Customized solutions and Active support is available. Email us at info@totalwpca
 
 = From your WordPress dashboard =
 1. Navigate to `Plugins > Add New` from your WP Admin dashboard.
-2. Search for `WC Google Authenticator - WC Two Factor Authentication (2FA , MFA)`.
-3. Install `WC Google Authenticator - WC Two Factor Authentication (2FA , MFA)` and Activate the plugin.
+2. Search for `Two Factor Authentication with Google for WooCommerce`.
+3. Install `Two Factor Authentication with Google for WooCommerce` and Activate the plugin.
 
 = From WordPress.org =
 1. Search for `Two Factor Authentication with Google for WooCommerce` and download it.
@@ -45,3 +45,6 @@ Customized solutions and Active support is available. Email us at info@totalwpca
 
 = 1.0.0 =
 * First version of `Two Factor Authentication with Google for WooCommerce` plugin supported with Google Authenticator for woocommerce users.
+
+= 1.0.1 =
+* UI Updated and FAQ added for help.

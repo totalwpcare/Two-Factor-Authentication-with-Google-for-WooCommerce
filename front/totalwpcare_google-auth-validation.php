@@ -4,7 +4,11 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit
 <div class="wrap">
    <div class="search">
       <p class="desc">Please enter the validation code displayed in Google Authenticator App.</p>
-      <input class="ga-vericode-input" type="number" id="verification_code" placeholder="Enter Code">
+      <div id="divOuter">
+        <div id="divInner">
+          <input class="" type="text" id="verification_code" placeholder="000000" maxlength="6" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  onKeyPress="if(this.value.length==6) return false;">
+        </div>
+      </div>
       <button class="btn-setup-ga" id="google_auth_validate">Validate</button>
    </div>
 </div>
@@ -19,14 +23,12 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit
   .wrap{
     width:500px;
     margin:20px auto;
-    border: 1px solid #eef4fb;
     background-color: #ffffff;
-    box-shadow: 10px 0px 60px 0px rgba(0, 0, 0, 0.08);
-    padding: 40px 40px 40px 40px;
+    padding: 20px;
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-    border-radius: 20px 20px 20px 20px;
-    text-align:center;
+    text-align: center;
     font-family: 'Nunito', sans-serif;
+    border: 1px solid #e4e4e4;
   }
   .wrap .desc{
     font-size: 16px;
@@ -111,6 +113,31 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit
     padding: 15px;
     border-radius: 10px;
   }
+  #divInner{
+  left: 0;
+  position: sticky;
+}
+#divOuter{
+  width: 384px; 
+  margin: 0 auto;
+  overflow: hidden;
+}
+#verification_code{
+    padding: 0px;
+    padding-left: 15px;
+    letter-spacing: 52px;
+    font-size: 20px;
+    font-weight: 700;
+    border: 0;
+    background-image: linear-gradient(to left, #464646 70%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 64px 2px;
+    background-repeat: repeat-x;
+    background-position-x: 45px;
+    width: 435px;
+    min-width:435px;
+    margin-bottom: 1rem;
+}
   @media (max-width:575px){
     .wrap{
     width:90%;

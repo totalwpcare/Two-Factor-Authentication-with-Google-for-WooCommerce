@@ -10,12 +10,22 @@ function TotalWPCare_google_auth_step_1() {
    $admin_ajax = admin_url('admin-ajax.php');
    $google_auth_step_2_nonce = wp_create_nonce("google_auth_step_2");
    ?>
-   <p class="desc">Please scan this QR code in Google Authenticator and Enter the Code Displayed in Google Authenticator App.</p>
    <p id="error_msg" class="ga-setup-error"></p>
+   <p class="">Open Google Authenticator App on your phone. Click on the Add button (+).</p>
+   <p class="desc mb-3">Please scan this QR code in Google Authenticator</p>
    <img class="ga-qr_code" src="<?php echo $qrCodeUrl ?>">
-   <input type="hidden" id="google_auth_secret" value="<?php echo $secret ?>">
-   <input class="ga-vericode-input" type="number" id="verification_code" placeholder="Enter Code">
+   <p class="or-text">===OR===</p>
+   <p class="desc">Click on the option "Enter a provided key". <br> Enter "Account name" as "TWC:<?php echo $site_title ?>:<?php echo $current_user->user_login ?> and enter "Your key" as shown below. </p>
+   <h4 class="code__verify mb-2 mt-3"><?php echo $secret ?></h4>
+   <p class="desc">Enter the Code Displayed in Google Authenticator App.</p>
+   <div id="divOuter">
+   <div id="divInner">
+      <input type="hidden" id="google_auth_secret" value="<?php echo $secret ?>">
+      <input class="" type="text" id="verification_code" placeholder="000000" maxlength="6" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  onKeyPress="if(this.value.length==6) return false;">
+   </div>
+   </div>
    <button class="btn-setup-ga" id="google_auth_step_2">Proceed</button>
+
    <script type="text/javascript">jQuery("#google_auth_step_2").click( function(e) {
      // e.preventDefault(); 
       var google_auth_secret = jQuery("#google_auth_secret").val();
@@ -27,7 +37,7 @@ function TotalWPCare_google_auth_step_1() {
         dataType: "text",
          data : {action: "TotalWPCare_google_auth_step_2", verification_code: verification_code, google_auth_secret: google_auth_secret, nonce: "<?php echo $google_auth_step_2_nonce ?>"},
          success: function(response) {
-            if(response === "success")
+            if(response.trim() === "success")
             {
                jQuery("#google_auth_data").html("<p class=\"ga-setup-success\">Google Authenticator Setup Successfully</p>");
             }
