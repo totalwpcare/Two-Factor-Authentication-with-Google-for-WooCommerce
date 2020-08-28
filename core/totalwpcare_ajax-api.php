@@ -25,7 +25,6 @@ function TotalWPCare_google_auth_step_1() {
    </div>
    </div>
    <button class="btn-setup-ga" id="google_auth_step_2">Proceed</button>
-
    <script type="text/javascript">jQuery("#google_auth_step_2").click( function(e) {
      // e.preventDefault(); 
       var google_auth_secret = jQuery("#google_auth_secret").val();

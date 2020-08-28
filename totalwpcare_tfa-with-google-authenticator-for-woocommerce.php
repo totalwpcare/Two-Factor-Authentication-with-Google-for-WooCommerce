@@ -3,7 +3,7 @@
 Plugin Name: Two Factor Authentication with Google for WooCommerce
 Plugin URI: http://totalwpcare.com/
 Description:  This plugin provides Google Authenticator as an additional layer of security to Woocommerce login. 
-Version: 1.0.0
+Version: 1.0.1
 Author: the TotalWPCare Team
 Author URI: http://totalwpcare.com
 License: GPLv2 or later
