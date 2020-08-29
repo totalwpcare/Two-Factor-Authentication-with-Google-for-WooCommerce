@@ -6,7 +6,7 @@ Donate link: https://totalwpcare.com/donate/
 Requires at least: 3.0.1
 Tested up to: 5.5
 Requires PHP: 5.4.0
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,8 +43,13 @@ Customized solutions and Active support is available. Email us at info@totalwpca
 
 == Changelog ==
 
-= 1.0.0 =
-* First version of `Two Factor Authentication with Google for WooCommerce` plugin supported with Google Authenticator for woocommerce users.
+= 1.0.2 - 2020-08-29 =
+* Logout Related issue solved.
+* Logout feature added at the time of validation.
 
-= 1.0.1 =
-* UI Updated and FAQ added for help.
+= 1.0.1 - 2020-08-28 =
+* UI Updated for Validation and Configuration screens.
+* FAQ added for help.
+
+= 1.0.0 - 2020-08-27 =
+* First version of `Two Factor Authentication with Google for WooCommerce` plugin supported with Google Authenticator for woocommerce users.

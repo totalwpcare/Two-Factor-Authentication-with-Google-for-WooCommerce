@@ -3,7 +3,7 @@
 Plugin Name: Two Factor Authentication with Google for WooCommerce
 Plugin URI: http://totalwpcare.com/
 Description:  This plugin provides Google Authenticator as an additional layer of security to Woocommerce login. 
-Version: 1.0.1
+Version: 1.0.2
 Author: the TotalWPCare Team
 Author URI: http://totalwpcare.com
 License: GPLv2 or later
@@ -43,8 +43,9 @@ class TotalWPCare_google_authenticator {
       // Register the integration.
     // add_filter( 'woocommerce_integrations', array( $this, 'add_integration' ) );
 
-      add_action('init','TotalWPCare_redirect_user');
+      add_action('template_redirect','TotalWPCare_redirect_user');
 		function TotalWPCare_redirect_user(){
+		global $wp;
 		if (!wp_doing_ajax()) {
 		  if(is_user_logged_in()){
 			  	if(empty(get_user_meta(get_current_user_id(), 'TotalWPCare_google_auth_secret', true)))
@@ -52,9 +53,12 @@ class TotalWPCare_google_authenticator {
 			  		$url = parse_url($_SERVER['REQUEST_URI']);
 				 	if($url['path'] != '/my-account/twc-google-authenticator/')
 				 	{
-				 		$google_auth_url = wc_get_account_endpoint_url('twc-google-authenticator');
-				    	die(wp_redirect($google_auth_url));
-				    	// die; // You have to die here
+				 		if(!isset($wp->query_vars['customer-logout']))
+				 		{
+				 			$google_auth_url = wc_get_account_endpoint_url('twc-google-authenticator');
+					    	die(wp_redirect($google_auth_url));
+					    	// die; // You have to die here
+				 		}
 				 	}
 			  	}
 			  	else
@@ -67,7 +71,10 @@ class TotalWPCare_google_authenticator {
 			  			$google_validator_url = wc_get_account_endpoint_url('twc-google-validator');
 			  			if($url['path'] != '/my-account/twc-google-validator/')
 			  			{
-			  				die(wp_redirect($google_validator_url));
+			  				if(!isset($wp->query_vars['customer-logout']))
+				 			{
+			  					die(wp_redirect($google_validator_url));
+			  				}
 			  				// die; // You have to die here
 			  			}
 			  		}

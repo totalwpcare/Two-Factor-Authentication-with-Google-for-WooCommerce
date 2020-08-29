@@ -10,6 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit
         </div>
       </div>
       <button class="btn-setup-ga" id="google_auth_validate">Validate</button>
+      <a class="button" href="<?php echo wc_logout_url() ?>">Logout</a>
    </div>
 </div>
 <style>
